@@ -26,7 +26,7 @@ def main():
     train_dataset, eval_dataset = load(tokenizer=tokenizer, **cfg.DATASETS)
 
     # 모델 로드
-    model = BartForConditionalGeneration.from_pretrained(cfg.PATH.BASE_MODEL)
+    model = BartForConditionalGeneration.from_pretrained(cfg.PATH.base_model)
 
     if cfg.ETC.get("wandb_project"):
         os.environ["WANDB_PROJECT"] = cfg.ETC.wandb_project
